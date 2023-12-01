@@ -1,12 +1,44 @@
 <html>
     <head>
         <title>My first web page</title>
+        <!-- Poner favicon(pagina favicon.io)atajo:(link:favicon)-->
+        <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <style>
+        
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: aqua;
+            color: black;
+            font-size: 1em;
+            font-weight: 700;
+            padding: 3em;
+            border-width: 2em;
+            border-color: rgb(0, 0, 0);
+            border-style: groove; 
+        }
+
+        p{
+            background-color: rgb(148, 66, 224);
+            color: aliceblue;
+            padding: 10px;
+            border: 10px solid rgb(112, 0, 163);
+            border-radius: 10%;
+        }
+
+        img{
+            border-radius: 100px;
+        }
+
+        
+    </style>
+
 
     </head>
 
     <body>
 
-        <h1>Heading 1</h1>
+        <h1 style="background-color: aqua;">Heading 1</h1>
         <p>Hello World</p>
 
         <a href="#bottom">Go to bottom</a> <!-- Para moverte a otro lado de la pagina, en este caso abajo puse que abajo se llamase bottom asi que al darle baja-->
@@ -77,11 +109,74 @@
 
             <a name="bottom"></a> <!-- Pones el nombre que le quieras dar y luego arriba pones que te direccione al nombre -->
 
+            <br><br><br><br>
+            <!-- Formularios -->    
+            <form action="process.php" method="get">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+                <br><br>
+                <label for="pwd">Password:</label>
+                <input type="password" name="pwd" id="pwd">
+                <input type="submit" value="submit">
+            </form>
+
+            <form action="submit.php" method="get">
+                <fieldset>
+                    <legend>Color favorito</legend> 
+                    <input type="radio" name="colour" id="red" value="red">
+                    <label for="red">Red</label>
+
+                    <input type="radio" name="colour" id="blue" value="blue">
+                    <label for="red">Blue</label>
+
+                    <input type="radio" name="colour" id="green" value="green">
+                    <label for="red">Green</label>
+
+            
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Comunication ways</legend>
+                    <input type="checkbox" name="email" id="email">
+                    <label for="email">E-mail</label>
+
+                    <input type="checkbox" name="mail" id="mail">
+                    <label for="mail">Mail</label>
+
+                    <input type="checkbox" name="phone" id="phone">
+                    <label for="phone">Phone</label>
+
+                </fieldset>
+                <hr>
+                <h2>Nacionality</h2>
+                <label for="nacionality">Salect nacionality: </label>
+                <select name="nacionality" id="nacionality">
+                    <option value="spanish">Spanish</option>
+                    <option value="french">French</option>
+                    <option value="british">British</option>
+                    <option value="russian">Russian</option>
+                </select> 
+                <br>
+                <label for="comment">Put your comment</label>
+                <textarea name="comment" id="" cols="50" rows="20" placeholder="comenta aqui burro"></textarea>
+                <br>
+                <input type="submit" value="submit">
+                
+
+            </form>
+            <br><br><br><br>
+
             <h1>Video de ejemplo</h1>
          <video width="640" height="360" controls>
             <source src="./img/Y2meta.app - Watermelon _ HTML CSS.mp4" type="video/mp4">
              Tu navegador no admite la reproducción de videos.
         </video>
+        <br><br><br><br><br>
+
+    
+
+
 
     </body>
 </html>
